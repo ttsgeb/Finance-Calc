@@ -5,3 +5,8 @@ const fedRates2023 = {
     headOfHousehold: [0, 15700, 59850, 95350, 182100, 231250, 578125],
     marriedJoint: [0, 22000, 89450, 190750, 364200, 462500, 693750],
 }
+
+//Type,SocEe,MedEe,MedExp,SocEr,MedEr,FUTA,
+//Rate,0.062,0.0145,0.009,0.062,0.0145,0.06,
+//MinTaxable,0,0,200000,0,0,0,
+//MaxTaxable,160200,-1,-1,160200,-1,7000,
