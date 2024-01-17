@@ -1,25 +1,27 @@
-let a = 10;
-let b = 1;
-document.getElementById("salary").value = b;
+let maxTaxRate = 0;
+let fedFilingStatus = "single";
 
-let x = a + b;
-document.getElementById("demo").innerHTML = x;
-
-console.log(fedRates2023.single[2]);
+function incomeSubmit(){
+    console.log("Hello");
+    salaryCheck();
+}
 
 function salaryCheck(){
     let salary = Number(document.getElementById("salary").value);
     //console.log(salary);    
-    let a = 10;
-    let x = fedRates2023.rates[rateFind(salary)];
-    document.getElementById("demo").innerHTML = x;
+    maxTaxRate = fedIncome2023.rates[rateFind(salary)];
+    let maxTaxPer = maxTaxRate * 100;
+    let taxString = "Your highest tax rate is: ".concat(maxTaxPer.toString(), "%");
+    document.getElementById("maxRate").innerHTML = taxString;
 }
 
 function rateFind(salary){
-    //console.log(salary);
-    let nBrackets = fedRates2023.single.length;
+    console.log(salary);
+    let status = filingStatus();
+    let bracket = fedIncome2023[status];
+    let nBrackets = bracket.length;
     for(let i = 0; i < nBrackets; i++){
-        if(salary < fedRates2023.single[i]){
+        if(salary < bracket[i]){
             console.log(i);
             return i-1;
         }
@@ -27,3 +29,9 @@ function rateFind(salary){
     return nBrackets - 1;
 }
 
+function filingStatus(){
+    let statusRaw = document.getElementById("filingStatus");
+    let fStatus = statusRaw.value;
+    console.log(fStatus);
+    return fStatus;
+}
