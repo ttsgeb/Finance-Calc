@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I am making lots of problems.</p>
-<p id="demo"></p>
-<script src="./code/main.js">
-</script> 
-</body>
+    <body>
+        <h1>Finance Calculator</h1>
+        <p>Input your filing status and AGI</p>
+        <!-- <select name="filing" id="filingStatus" onchange="filingStatus()"> -->
+        <select name="filing" id="filingStatus">
+            <option value="single">Single</option>
+            <option value="headOfHousehold">Head of Household</option>
+            <option value="marriedSeparate">Married filing Separately</option>
+            <option value="marriedJoint">Married filing Jointly</option>
+        </select>
+        <!-- <input id="salary" type="text" onchange="salaryCheck()"/> -->
+        <input id="salary" type="text"/>
+        <input id="incomeSubmit" type="button" value="Submit" onclick="incomeSubmit()"/>
+        <p>Your highest tax rate is: </p>
+        <p id="maxRate">Your max tax rate is: </p>
+        <script src="./src/taxRates.js"></script> 
+        <script src="./src/main.js"></script> 
+    </body>
 </html>
