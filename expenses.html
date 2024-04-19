@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Expense Calculator</h1>
+        <h2>Helping you find your yearly expenses!</h2>
+        <p>How much do you spend on each of these per month?</p>
+        <p>Housing: 
+            <input id="housing" type="text" value="0"/></p>
+        <p>Utilities: 
+            <input id="utilities" type="text" value="0"/></p> 
+        <p>Groceries: 
+            <input id="groceries" type="text" value="0"/></p>       
+        <p>Transportation: 
+            <input id="transportation" type="text" value="0"/></p>
+        <p>Insurance: 
+            <input id="insurance" type="text" value="0"/></p>
+        <p>Medical: 
+            <input id="medical" type="text" value="0"/></p>
+        <p>Other: 
+            <input id="other" type="text" value="0"/></p>
+        <input id="expenseSubmit" type="button" value="Submit" onclick="expenseSubmit()"/>
+        <p id="yearlyExpense"></p>
+        <script src="./src/expenses.js"></script> 
+    </body>
+</html>

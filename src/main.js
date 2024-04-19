@@ -14,7 +14,7 @@ function salaryCheck(){
     let maxTaxPer = maxTaxRate * 100;
     let taxString = (
         "Your highest tax rate is: ".concat(maxTaxPer.toString(), 
-        "%<br>Your total tax  is: $", taxAmount)
+        "%</br>Your total tax  is: $", taxAmount)
     );
     document.getElementById("maxRate").innerHTML = taxString;
 }
